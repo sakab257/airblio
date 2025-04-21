@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  
+
+h1 {
+    padding: 0.65em;
+    width: 100%;
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+  
+  .page-container {
+    width: calc(100% - 250px);
+    overflow-y: auto;
+    margin: 0px auto;
+    background-color: #fdfaf7;
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-equipes {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  .table-equipes th {
+    background-color: #f7f4f1;
+    color: #999;
+    padding: 1em;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .table-equipes td {
+    padding: 1.2em 1em;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .table-equipes tr:hover td {
+    background-color: #f9f9f9;
+  }
+  
+  .members-badge {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #dceaf7;
+    color: #0077cc;
+    font-size: 0.75em;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    margin-right: 0.3em;
+  }
+
+  .m2{
+    right: 15px;
+    background-color: #ecdcf7;
+  }
+
+  .m3{
+    right: 30px;
+    background-color: #f7dcdc;
+  }
+
+  .m4{
+    right: 45px;
+    background-color: #dcf7de;
+  }
+  .m5{
+    right: 60px;
+    background-color: #f7efdc;
+  }
+  
+  .status-active {
+    text-align: center;
+    width: 125px;
+    background-color: #d1f5e1;
+    color: #009e5e;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid #009e5e;
+    display: inline-block;
+  }
+  
+  .status-inactive {
+    text-align: center;
+    width: 125px;
+    background-color: #fde5e5;
+    color: #cc0000;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid #cc0000;
+    display: inline-block;
+  }

@@ -3,7 +3,7 @@
 $host = 'localhost';
 $dbname = 'airblio_db'; 
 $username = 'root'; 
-$password = 'root'; 
+$password = ''; 
 
 $mysqli = new mysqli(hostname: $host,
                     username: $username,

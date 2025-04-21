@@ -1,0 +1,171 @@
+:root {
+    --base-clr: #f5efe6;
+    --line-clr: #bfa88f;
+    --hover-clr: #fdfaf6;
+    --text-clr: #000;
+    --accent-clr: #55331d;
+    --secondary-text-clr: #3b3b3b;
+    
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  
+
+  .commandesTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .commandesTable th,
+  .commandesTable td {
+    padding: 1em;
+    text-align: center;
+    border-bottom: 1px solid var(--line-clr);
+  }
+  
+  .commandesTable thead th {
+    text-align: center;
+    font-weight: bold;
+    color: var(--text-clr);
+    background-color: var(--base-clr);
+  }
+  
+  .intervention-row {
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .intervention-row:hover {
+    background-color: var(--hover-clr);
+  }
+  
+  .intervention-details {
+    display: none;
+    background-color: #fff;
+    border-top: 1px solid var(--line-clr);
+  }
+  
+  .intervention-details td {
+    padding: 1em 2em;
+    text-align: left;
+  }
+  
+  .intervention-header {
+    font-weight: bold;
+    color: var(--text-clr);
+    margin-bottom: 0.3em;
+    display: block;
+  }
+
+  .fiche-intervention {
+    background: white;
+    border-radius: 12px;
+    padding: 2em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 0.95em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .fiche-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+  
+  .fiche-label {
+    font-weight: 600;
+    color: var(--secondary-text-clr);
+    min-width: 200px;
+  }
+  
+  .fiche-value {
+    font-weight: 400;
+    color: var(--text-clr);
+  }
+  
+  /* Styles spécifiques */
+  .fiche-type { color: #e08a00; }
+  .fiche-temps { color: #b00000; font-weight: 600; }
+  .fiche-prix { color: #333; }
+  .fiche-statut-en-cours { color: green; font-weight: bold; }
+  
+  .page-container {
+    padding: 40px;
+    width: 90%;
+    box-sizing: border-box;
+    background-color: var(--hover-clr);
+    min-height: 80vh;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+
+  .intervention-bar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  .rightBtn{
+    margin-right: 25px;
+    width: fit-content;
+    gap: 0.7em;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: var(--hover-clr);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    border: 0px solid;
+  }
+
+  .rightBtn:hover, .rightBtn:hover svg{
+    background-color: var(--text-clr);
+    color: white;
+    fill: white;
+  }
+
+  h1{
+    padding-left: 25px;
+  }
+  
+  .pagination {
+    text-align: center;
+    margin-top: 3em;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    text-decoration: none;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    border-radius: 6px;
+  }
+
+  .pagination a:hover{
+    background-color: var(--line-clr);
+  }
+  
+  .pagination a.active {
+    background-color: var(--text-clr);
+    color: white;
+    font-weight: bold;
+  }
+  
+
+  

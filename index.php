@@ -36,8 +36,9 @@ if(!isset($user)){
     <?php include "navbar.php"?>
     <main>
         <?php include "topbar.php"?>
-        <h1>Mappemonde</h1>
-        <div class="container"></div>
+        <div style="display:flex;height:70px;width:100%;" class="container">
+            <h1>Mappemonde</h1>
+        </div>
     </main>
 </body>
 </html>

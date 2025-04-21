@@ -1,5 +1,18 @@
+:root {
+    --base-clr: #f5efe6;              
+    --line-clr: #bfa88f;              
+    --hover-clr: #fdfaf6;             
+    --text-clr: #000;                
+    --accent-clr: #55331d;            
+    --secondary-text-clr: #3b3b3b;    
+  }
+
+html,body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .commande-bar{
-    background-color: blue;
     width: 100%;
     height: 70px;
     display: flex;
@@ -8,10 +21,256 @@
 }
 
 .barBtn{
-    background-color: red;
+  margin-right: 25px;
     width: 600px;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    transition: transform 0.3s ease; /* Ajoutez cette ligne */
+}
+
+.rightBtn{
+  margin-right: 25px;
+  width: 120px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: var(--hover-clr);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+  border: 0px solid;
+}
+
+.rightBtn:hover, .rightBtn:hover svg{
+  background-color: var(--text-clr);
+  color: white;
+  fill: white;
+}
+
+.commandesContainer {
+    overflow: hidden;
+    width: 95%;
+    margin: 20px auto;
+    height: 80vh;
+    background-color: var(--hover-clr);
+    border-radius: 10px;
+}
+.commandesTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .commandesTable th,
+  .commandesTable td {
+    padding: 1em;
+    text-align: center;
+    border-bottom: 1px solid var(--line-clr);
+  }
+  
+  .commande-row{
+    cursor: pointer;
+  }
+
+  
+  .commandesTable thead th {
+    text-align: center;
+    font-weight: bold;
+    color: var(--text-clr);
+    border-bottom: 1px solid var(--line-clr);
+  }
+  
+  .commandesTable tr:first-child svg{
+    text-align: center;
+    width: 1em;
+    height: 1em;
+    border-radius: 6px;
+    padding: 4px;
+  }
+  .commandesTable th:first-child svg {
+    border: 2px solid var(--text-clr);
+    border-radius: 6px;
+    padding: 4px;
+  }
+
+  .commandesTable th svg {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+  }
+
+  .th-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+  }
+  
+  .th-content svg {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+  }
+  
+  .commande-checkbox {
+    width: 1.2em;
+    height: 1.2em;
+    accent-color: var(--accent-clr); 
+    cursor: pointer;
+    margin: auto;
+    display: block;
+  }
+  
+  .pagination {
+    text-align: center;
+    margin-top: 3em;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    text-decoration: none;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    border-radius: 6px;
+  }
+
+  .pagination a:hover{
+    background-color: var(--line-clr);
+  }
+  
+  .pagination a.active {
+    background-color: var(--text-clr);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .status-valide {
+    color: rgb(56, 145, 56);
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .status-valide::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 65%;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgba(56, 145, 56, 0.2);
+    z-index: 0;
+  }
+  
+  .status-encours {
+    position: relative;
+    color: rgb(128, 128, 128);
+    font-weight: 600;
+    
+  }
+
+  .status-encours::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 65%;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(128, 128, 128,0.2);
+    z-index: 0;
+  }
+  
+  .status-autre {
+    color: var(--text-clr);
+  }
+
+  /* Style amélioré pour le filtrage */
+.filter-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 10px;
+}
+
+.filter-select {
+  display: none;
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid var(--line-clr);
+  background-color: var(--hover-clr);
+  color: var(--text-clr);
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-select:focus {
+  border-color: var(--text-clr);
+  box-shadow: 0 1px 5px rgba(85, 51, 29, 0.2);
+}
+
+.filter-select option {
+  padding: 8px;
+  background-color: var(--base-clr);
+}
+
+.filter-apply {
+  display: none;
+  margin-left: 10px;
+  padding: 8px 15px;
+  background-color: var(--text-clr);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-apply:hover {
+  background-color: var(--text-clr);
+}
+
+/* Animation pour l'apparition des filtres */
+.filter-select.show, .filter-apply.show {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#filterForm {
+  display: flex;
+  align-items: center;
+}
+
+/* Style pour le bouton filtre actif */
+.rightBtn.active {
+  background-color: var(--text-clr);
+  color: white;
+}
+
+.rightBtn.active svg {
+  fill: white;
+}
+
+#applyFilterBtn{
+  margin: 0px 20px;
 }
